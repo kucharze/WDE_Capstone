@@ -23,6 +23,7 @@ setTimeout(() => {
     localStorage.setItem("password", signup.elements["password"].value);
 
     console.log("Successful Signup");
+    alert("Successful Signup");
   });
 
   document.querySelector("#Login").addEventListener("submit", (e) => {
@@ -47,6 +48,7 @@ setTimeout(() => {
     }
 
     console.log("Successful Login");
+    alert("Successful Login");
   });
   console.log("loaded");
 }, 500);
