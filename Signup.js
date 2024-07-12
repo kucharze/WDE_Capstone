@@ -1,10 +1,9 @@
-let signup = document.querySelector(".Signup");
-let login = document.querySelector(".Login");
-
 setTimeout(() => {
-  document.querySelector(".Signup").addEventListener("submit", (e) => {
+  let signup = document.querySelector("#Signup");
+  let login = document.querySelector("#Login");
+  document.querySelector("#Signup").addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log("submitted Signup");
+    console.log("submitted Signup", signup);
     if (signup.elements["email"].value === "") {
       alert("Please enter an email");
     } else if (signup.elements["password"].value === "") {
@@ -12,7 +11,7 @@ setTimeout(() => {
     }
   });
 
-  document.querySelector(".Login").addEventListener("submit", (e) => {
+  document.querySelector("#Login").addEventListener("submit", (e) => {
     e.preventDefault();
     console.log("submitted Login");
   });
