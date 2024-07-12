@@ -1,6 +1,7 @@
 setTimeout(() => {
   let signup = document.querySelector("#Signup");
   let login = document.querySelector("#Login");
+
   document.querySelector("#Signup").addEventListener("submit", (e) => {
     e.preventDefault();
     console.log("submitted Signup", signup);
@@ -16,4 +17,4 @@ setTimeout(() => {
     console.log("submitted Login");
   });
   console.log("loaded");
-}, 1000);
+}, 500);
