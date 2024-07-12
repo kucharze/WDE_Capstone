@@ -21,8 +21,6 @@
     <script src="shop.js"></script>
     <style>
       .main {
-        display: flex;
-        justify-content: space-around;
         margin: 20px;
       }
       .pack {
@@ -38,6 +36,9 @@
         width: 400px;
         margin: 20px;
       }
+      li {
+        font-size: 30px;
+      }
     </style>
     <div class="logo">
       <img src="Images/MTG.jpg" alt="" class="mtgLogo" />
@@ -48,7 +49,7 @@
       <a href="Cardtypes.html">Learn about Cards</a>
       <a href="Login.html">Login/Signup</a>
     </div>
-    <div class="main">
+    <div class="main d-flex justify-content-around">
       <div class="cart">
         <h3>Your list</h3>
         <ol class="shoppingCart"></ol>
