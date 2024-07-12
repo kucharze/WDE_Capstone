@@ -16,12 +16,17 @@ setTimeout(() => {
   let cart = document.querySelector(".shoppingCart");
   let total = document.querySelector(".total");
 
-  const addToCart = (item) => {};
+  const addToCart = (item) => {
+    let cartItem = document.createElement("li");
+    cartItem.textContent = item;
+    cart.appendChild(cartItem);
+  };
 
   shop.addEventListener("click", (e) => {
     let target = e.target;
     // console.log(target);
     let price = priceList[target.id];
+    addToCart(target.id);
     total += price;
     total.textContent = `Total $${total}`;
     console.log(target, price);
