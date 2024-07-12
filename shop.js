@@ -9,7 +9,7 @@ let priceList = {
   ["Unfinity"]: 6,
 };
 
-let total = 0;
+let cartTotal = 0;
 
 setTimeout(() => {
   let shop = document.querySelector(".shop");
@@ -26,9 +26,10 @@ setTimeout(() => {
     let target = e.target;
     // console.log(target);
     let price = priceList[target.id];
+    console.log(total);
     addToCart(target.id);
-    total += price;
-    total.textContent = `Total $${total}`;
-    console.log(target, price);
+    cartTotal += price;
+    total.innerHTML = `Total $${cartTotal}`;
+    console.log(target, price, total);
   });
 }, 500);
