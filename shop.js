@@ -1,12 +1,11 @@
 let priceList = {
-  ["Unfinity"]: 6,
-  ["Unfinity"]: 6,
-  ["Unfinity"]: 6,
-  ["Unfinity"]: 6,
-  ["Unfinity"]: 6,
-  ["Unfinity"]: 6,
-  ["Unfinity"]: 6,
-  ["Unfinity"]: 6,
+  ["Core2019"]: 4,
+  ["Core2021"]: 3,
+  ["MH2"]: 6,
+  ["Warofthespark"]: 4,
+  ["WildsofElderaine"]: 4,
+  ["Lordoftherings"]: 5,
+  ["Brotherswar"]: 4,
   ["Unfinity"]: 6,
 };
 
