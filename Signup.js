@@ -1,10 +1,15 @@
 let signup = document.querySelector(".Signup");
-let login = document.querySelector("Login");
+let login = document.querySelector(".Login");
 
-login.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
+setTimeout(() => {
+  document.querySelector(".Signup").addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log("submitted Signup");
+  });
 
-signup.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
+  document.querySelector(".Login").addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log("submitted Login");
+  });
+  console.log("loaded");
+}, 1000);
