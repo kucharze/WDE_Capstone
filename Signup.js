@@ -9,7 +9,14 @@ setTimeout(() => {
       alert("Please enter an email");
     } else if (signup.elements["password"].value === "") {
       alert("Please enter a password");
+    } else if (
+      signup.elements["confirmPassword"].value !==
+      signup.elements["password"].value
+    ) {
+      alert("Passwords do not match");
     }
+
+    console.log("Successful Signup");
   });
 
   document.querySelector("#Login").addEventListener("submit", (e) => {
