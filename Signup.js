@@ -16,6 +16,9 @@ setTimeout(() => {
       alert("Passwords do not match");
     }
 
+    localStorage.setItem("email", signup.elements["email"].value);
+    localStorage.setItem("password", signup.elements["password"].value);
+
     console.log("Successful Signup");
   });
 
@@ -26,6 +29,14 @@ setTimeout(() => {
       alert("Please enter an email");
     } else if (login.elements["password"].value === "") {
       alert("Please enter a password");
+    }
+
+    let email = localStorage.getItem("email");
+    let password = localStorage.getItem("password");
+    if (login.elements["email"].value !== email) {
+      alert("Incorrect email");
+    } else if (login.elements["password"].value !== password) {
+      alert("Incorrect password");
     }
 
     console.log("Successful Login");
