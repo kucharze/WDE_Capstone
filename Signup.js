@@ -22,6 +22,13 @@ setTimeout(() => {
   document.querySelector("#Login").addEventListener("submit", (e) => {
     e.preventDefault();
     console.log("submitted Login");
+    if (login.elements["email"].value === "") {
+      alert("Please enter an email");
+    } else if (login.elements["password"].value === "") {
+      alert("Please enter a password");
+    }
+
+    console.log("Successful Login");
   });
   console.log("loaded");
 }, 500);
