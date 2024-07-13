@@ -16,6 +16,13 @@ setTimeout(() => {
   let cart = document.querySelector(".shoppingCart");
   let total = document.querySelector(".total");
 
+  const clearCart = () => {
+    cart.innerHTML = "";
+    cartTotal = 0;
+    total.innerHTML = `Total $${cartTotal}`;
+  };
+  document.querySelector(".clearCart").addEventListener("click", clearCart);
+
   const addToCart = (item) => {
     let cartItem = document.createElement("li");
     cartItem.textContent = item;
