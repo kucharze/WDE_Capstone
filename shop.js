@@ -36,7 +36,7 @@ setTimeout(() => {
     if (cartTotal > amount) {
       alert("Insufficient funds");
     } else if (cartTotal < amount) {
-      alert("Checkout");
+      alert("Thank you for shopping");
       cart.innerHTML = "";
       cartTotal = 0;
       total.innerHTML = `Total $${cartTotal}`;
