@@ -30,6 +30,7 @@ setTimeout(() => {
   };
 
   shop.addEventListener("click", (e) => {
+    if (e.target.tagName !== "IMG") return;
     let target = e.target;
     // console.log(target);
     let price = priceList[target.id];
