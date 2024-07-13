@@ -23,6 +23,14 @@ setTimeout(() => {
   };
   document.querySelector(".clearCart").addEventListener("click", clearCart);
 
+  const checkout = () => {
+    alert("Checkout");
+    cart.innerHTML = "";
+    cartTotal = 0;
+    total.innerHTML = `Total $${cartTotal}`;
+  };
+  document.querySelector(".checkout").addEventListener("click", checkout);
+
   const addToCart = (item) => {
     let cartItem = document.createElement("li");
     cartItem.textContent = item;
