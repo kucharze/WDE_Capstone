@@ -37,7 +37,6 @@
     <h1>Learn about different types of cards</h1>
     <table>
       <tr>
-        <th>Creature</th>
         <th>Instant</th>
         <th>Sourercy</th>
         <th>Artifact</th>
@@ -45,7 +44,6 @@
         <th>Planeswalkers</th>
       </tr>
       <tr>
-        <td><img class="cardtype" src="Images/creature.gif" alt="" /></td>
         <td><img class="cardtype" src="Images/sourcery.gif" alt="" /></td>
         <td><img class="cardtype" src="Images/Instant.jpg" alt="" /></td>
         <td><img class="cardtype" src="Images/artifact.jpg" alt="" /></td>
@@ -65,7 +63,7 @@
             aria-expanded="true"
             aria-controls="collapseOne"
           >
-            Creature
+            Creature <img class="cardtype" src="Images/creature.gif" alt="" />
           </button>
         </h2>
         <div
@@ -131,7 +129,7 @@
             class="accordion-button"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
+            data-bs-target="#collapseFour"
             aria-expanded="false"
             aria-controls="collapseOne"
           >
@@ -139,7 +137,30 @@
           </button>
         </h2>
         <div
-          id="collapseOne"
+          id="collapseFour"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>This is the fourth item's accordion body.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseFive"
+            aria-expanded="false"
+            aria-controls="collapseOne"
+          >
+            Enchantment
+          </button>
+        </h2>
+        <div
+          id="collapseFive"
           class="accordion-collapse collapse"
           data-bs-parent="#accordionExample"
         >
@@ -154,43 +175,20 @@
             class="accordion-button"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
-          >
-            Enchantment
-          </button>
-        </h2>
-        <div
-          id="collapseOne"
-          class="accordion-collapse collapse show"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            <strong>This is the first item's accordion body.</strong>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="true"
+            data-bs-target="#collapseSix"
+            aria-expanded="false"
             aria-controls="collapseOne"
           >
             Planeswalkers
           </button>
         </h2>
         <div
-          id="collapseOne"
-          class="accordion-collapse collapse show"
+          id="collapseSix"
+          class="accordion-collapse collapse"
           data-bs-parent="#accordionExample"
         >
           <div class="accordion-body">
-            <strong>This is the first item's accordion body.</strong>
+            <strong>This is the Six item's accordion body.</strong>
           </div>
         </div>
       </div>
