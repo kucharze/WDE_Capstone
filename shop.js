@@ -17,6 +17,10 @@ setTimeout(() => {
   let total = document.querySelector(".total");
 
   const clearCart = () => {
+    if (cartTotal === 0) {
+      alert("Cart is empty");
+      return;
+    }
     cart.innerHTML = "";
     cartTotal = 0;
     total.innerHTML = `Total $${cartTotal}`;
@@ -24,10 +28,19 @@ setTimeout(() => {
   document.querySelector(".clearCart").addEventListener("click", clearCart);
 
   const checkout = () => {
-    alert("Checkout");
-    cart.innerHTML = "";
-    cartTotal = 0;
-    total.innerHTML = `Total $${cartTotal}`;
+    if (cartTotal === 0) {
+      alert("Cart is empty");
+      return;
+    }
+    let amount = window.prompt("Enter amount to pay");
+    if (cartTotal > amount) {
+      alert("Insufficient funds");
+    } else if (cartTotal < amount) {
+      alert("Checkout");
+      cart.innerHTML = "";
+      cartTotal = 0;
+      total.innerHTML = `Total $${cartTotal}`;
+    }
   };
   document.querySelector(".checkout").addEventListener("click", checkout);
 
