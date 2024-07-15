@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  font-size: 25px;
+  font-size: 35px;
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: lightblue;
@@ -16,5 +16,5 @@
   background-color: black;
 }
 .mtgLogo {
-  height: 50em;
+  height: 40em;
 }
