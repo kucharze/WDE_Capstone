@@ -7,3 +7,9 @@ This Project feature putting together four different pages in order to create a 
 ## The parts of this website include:
 
 ### A page that describes the basic rules
+
+### A page with Bootstrap accordians that explains each type of card
+
+### A pack shop
+
+### A basic login page
