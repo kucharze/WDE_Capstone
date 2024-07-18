@@ -31,18 +31,23 @@ setTimeout(() => {
 
   const checkout = () => {
     //User buys the items in their cart
-    if (cartTotal === 0) {
-      alert("Cart is empty");
-      return;
-    }
-    let amount = window.prompt("Enter amount to pay");
-    if (cartTotal > amount) {
-      alert("Insufficient funds");
-    } else if (cartTotal < amount) {
-      alert("Thank you for shopping");
-      cart.innerHTML = "";
-      cartTotal = 0;
-      total.innerHTML = `Total $${cartTotal}`;
+
+    try {
+      if (cartTotal === 0) {
+        throw new Error("Cart is empty");
+        // return;
+      }
+      let amount = window.prompt("Enter amount to pay");
+      if (cartTotal > amount) {
+        alert("Insufficient funds");
+      } else if (cartTotal < amount) {
+        alert("Thank you for shopping");
+        cart.innerHTML = "";
+        cartTotal = 0;
+        total.innerHTML = `Total $${cartTotal}`;
+      }
+    } catch (e) {
+      alert("Error", e);
     }
   };
   document.querySelector(".checkout").addEventListener("click", checkout);
