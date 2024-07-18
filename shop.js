@@ -1,3 +1,4 @@
+//List to compare prices against
 let priceList = {
   ["Core2019"]: 4,
   ["Core2021"]: 3,
@@ -17,6 +18,7 @@ setTimeout(() => {
   let total = document.querySelector(".total");
 
   const clearCart = () => {
+    //Clear the user's cart
     if (cartTotal === 0) {
       alert("Cart is empty");
       return;
@@ -28,6 +30,7 @@ setTimeout(() => {
   document.querySelector(".clearCart").addEventListener("click", clearCart);
 
   const checkout = () => {
+    //User buys the items in their cart
     if (cartTotal === 0) {
       alert("Cart is empty");
       return;
@@ -45,18 +48,27 @@ setTimeout(() => {
   document.querySelector(".checkout").addEventListener("click", checkout);
 
   const addToCart = (item) => {
+    //Add item to user's cart
     let cartItem = document.createElement("li");
     cartItem.textContent = item;
     cart.appendChild(cartItem);
   };
 
   shop.addEventListener("click", (e) => {
+    //Logic to add items to user's cart and increase price
+    //when clicking on a card pack
+
+    //User needs to click on a
     if (e.target.tagName !== "IMG") return;
     let target = e.target;
     // console.log(target);
+    //Grab price from priceList
     let price = priceList[target.id];
     console.log(total);
+    //Add to user's cart
     addToCart(target.id);
+
+    //Increase total price
     cartTotal += price;
     total.innerHTML = `Total $${cartTotal}`;
     console.log(target, price, total);
