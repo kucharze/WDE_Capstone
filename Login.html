@@ -49,14 +49,20 @@
     </div>
     <div class="forms mt-5">
       <h1>Signup</h1>
+      <!--Signup form-->
       <form id="Signup" action="">
+        <!--Email-->
         <input type="email" placeholder="Email" name="email" /><br />
+        <!--Password with pattern-->
         <input
           type="password"
           placeholder="Password"
           minlength="5"
           name="password"
+          pattern="[\w]+[\W]+"
+          title="No Spaces Allowed, atleast 5 characters, atleast one special character"
         /><br />
+        <!--Confirm Password with pattern-->
         <input
           type="password"
           placeholder="Confirm Password"
@@ -69,8 +75,11 @@
         <input type="submit" value="Signup" />
       </form>
       <h1 class="mt-3">Login</h1>
+      <!--login form-->
       <form id="Login" action="">
+        <!--Email-->
         <input type="email" placeholder="Email" name="email" /><br />
+        <!--Password-->
         <input type="password" placeholder="Password" name="password" /> <br />
         <input type="submit" value="Login" />
       </form>
