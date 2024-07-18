@@ -45,9 +45,7 @@ setTimeout(() => {
       } else if (cartTotal < amount) {
         //The user paid enough, clear the cart and total
         alert("Thank you for shopping");
-        cart.innerHTML = "";
-        cartTotal = 0;
-        total.innerHTML = `Total $${cartTotal}`;
+        clearCart();
       }
     } catch (e) {
       alert("Error: " + e.message);
