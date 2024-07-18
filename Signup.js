@@ -25,6 +25,8 @@ setTimeout(() => {
   document.querySelector("#Signup").addEventListener("submit", (e) => {
     e.preventDefault();
     console.log("submitted Signup", signup);
+
+    //Check if values are blank, if so alert user
     if (signup.elements["email"].value === "") {
       alert("Please enter an email");
       return;
@@ -39,6 +41,7 @@ setTimeout(() => {
       return;
     }
 
+    //Add to local storage
     setLocalStorage();
 
     console.log("Successful Signup");
@@ -48,6 +51,8 @@ setTimeout(() => {
   document.querySelector("#Login").addEventListener("submit", (e) => {
     e.preventDefault();
     console.log("submitted Login");
+
+    //Check if values are blank, if so alert user
     if (login.elements["email"].value === "") {
       alert("Please enter an email");
       return;
@@ -56,9 +61,7 @@ setTimeout(() => {
       return;
     }
 
-    let email = localStorage.getItem("email");
-    let password = localStorage.getItem("password");
-
+    //Compare values against values in local storage
     let storageValues = getLocalStorage();
     console.log(storageValues);
     if (login.elements["email"].value !== storageValues[0]) {
