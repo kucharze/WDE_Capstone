@@ -4,6 +4,8 @@ This is the Capstone Project for my Per Scholas Web Design Essentials class.
 
 This Project feature putting together four different pages in order to create a full blown web page.
 
+All picture resources are property of Wizards of the Coast. I claim no ownership to them
+
 ## The parts of this website include:
 
 ### A page that describes the basic rules
