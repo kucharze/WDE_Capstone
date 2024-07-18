@@ -1,4 +1,4 @@
-//List to compare prices against
+//List to compare prices for adding to total
 let priceList = {
   ["Core2019"]: 4,
   ["Core2021"]: 3,
