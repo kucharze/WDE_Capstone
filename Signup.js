@@ -2,6 +2,26 @@ setTimeout(() => {
   let signup = document.querySelector("#Signup");
   let login = document.querySelector("#Login");
 
+  const getLocalStorage = () => {
+    console.log("getLocalStorage");
+    //Get values out of local storage
+    let values = [];
+    if (localStorage.getItem("email")) {
+      values.push(localStorage.getItem("email"));
+    }
+    if (localStorage.getItem("password")) {
+      values.push(localStorage.getItem("password"));
+    }
+    return values;
+  };
+
+  const setLocalStorage = () => {
+    console.log("setLocalStorage");
+    //Set local storage values
+    localStorage.setItem("email", signup.elements["email"].value);
+    localStorage.setItem("password", signup.elements["password"].value);
+  };
+
   document.querySelector("#Signup").addEventListener("submit", (e) => {
     e.preventDefault();
     console.log("submitted Signup", signup);
@@ -19,8 +39,7 @@ setTimeout(() => {
       return;
     }
 
-    localStorage.setItem("email", signup.elements["email"].value);
-    localStorage.setItem("password", signup.elements["password"].value);
+    setLocalStorage();
 
     console.log("Successful Signup");
     alert("Successful Signup");
@@ -39,10 +58,13 @@ setTimeout(() => {
 
     let email = localStorage.getItem("email");
     let password = localStorage.getItem("password");
-    if (login.elements["email"].value !== email) {
+
+    let storageValues = getLocalStorage();
+    console.log(storageValues);
+    if (login.elements["email"].value !== storageValues[0]) {
       alert("Incorrect email");
       return;
-    } else if (login.elements["password"].value !== password) {
+    } else if (login.elements["password"].value !== storageValues[1]) {
       alert("Incorrect password");
       return;
     }
