@@ -34,13 +34,16 @@ setTimeout(() => {
 
     try {
       if (cartTotal === 0) {
+        //Throw an error if the cart is empty
         throw new Error("Cart is empty");
         // return;
       }
       let amount = window.prompt("Enter amount to pay");
       if (cartTotal > amount) {
-        alert("Insufficient funds");
+        //Throw an error if the user didn't pay enough
+        throw new Error("Insufficient funds");
       } else if (cartTotal < amount) {
+        //The user paid enough, clear the cart and total
         alert("Thank you for shopping");
         cart.innerHTML = "";
         cartTotal = 0;
