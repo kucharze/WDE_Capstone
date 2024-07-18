@@ -47,7 +47,7 @@ setTimeout(() => {
         total.innerHTML = `Total $${cartTotal}`;
       }
     } catch (e) {
-      alert("Error", e);
+      alert("Error: " + e.message);
     }
   };
   document.querySelector(".checkout").addEventListener("click", checkout);
